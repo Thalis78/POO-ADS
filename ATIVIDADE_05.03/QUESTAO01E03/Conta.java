@@ -58,11 +58,6 @@ public class Conta {
             System.out.println("Valor inválido para depósito.");
         }
     }
-
-    public double consultarSaldo() {
-        return saldo;
-    }
-
     public String toString() {
         return "Conta ID: " + id + ", Número: " + numero + ", Cliente: " + cliente.getNome() + ", Saldo: R$" + saldo;
     }

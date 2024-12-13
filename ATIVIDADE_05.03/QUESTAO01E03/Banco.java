@@ -5,6 +5,22 @@ public class Banco {
     private List<Conta> contas = new ArrayList<>();
     private List<Cliente> clientes = new ArrayList<>();
 
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
+    public List<Conta> getContas() {
+        return contas;
+    }
+
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
+    }
+
     public void inserirConta(Conta conta) {
         contas.add(conta);
     }
@@ -74,9 +90,9 @@ public class Banco {
         return 0;
     }
 
-    public Cliente consultarClientePorId(int id) {
+    public Cliente consultarClientePorCPF(String CPF) {
         for (Cliente cliente : clientes) {
-            if (cliente.getId() == id) {
+            if (cliente.getCpf() == CPF) {
                 return cliente;
             }
         }

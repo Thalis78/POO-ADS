@@ -44,8 +44,4 @@ public class Cliente {
             System.out.println("Conta já está associada a este cliente.");
         }
     }
-        @Override
-    public String toString() {
-        return "Conta ID: " + id + ", Número: " + numero + ", Cliente: " + cliente.getNome() + ", Saldo: R$" + saldo;
-    }
 }

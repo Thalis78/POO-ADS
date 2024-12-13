@@ -1,13 +1,17 @@
+import java.util.Date;
 import java.util.Scanner;
 
 public class FuncionalidadesBanco {
-    
+    private static int idConta = 1;
+    private static int idCliente = 1;
+
     public static void inserirConta(Banco banco, Scanner input) {
         System.out.print("Digite o número da conta: ");
         String numero = input.nextLine();
-        Conta conta = new Conta(numero, 0);
+        Conta conta = new Conta(idConta, null,numero,0);
         banco.inserirConta(conta);
         System.out.println("Conta inserida com sucesso!");
+        idConta++;
     }
 
     public static void consultarConta(Banco banco, Scanner input) {
@@ -78,9 +82,9 @@ public class FuncionalidadesBanco {
     }
 
     public static void totalizacoes(Banco banco) {
-        int totalContas = banco.getTotalContas();
-        double totalDinheiro = banco.getTotalDinheiro();
-        double mediaSaldo = banco.getMediaSaldo();
+        int totalContas = banco.quantidadeDeContas();
+        double totalDinheiro = banco.totalSaldo();
+        double mediaSaldo = banco.mediaSaldo();
 
         System.out.println("Total de contas: " + totalContas);
         System.out.println("Total de dinheiro depositado: R$" + totalDinheiro);
@@ -92,17 +96,20 @@ public class FuncionalidadesBanco {
         String nome = input.nextLine();
         System.out.print("Digite o CPF do cliente: ");
         String cpf = input.nextLine();
+        System.out.print("Digite sua data de nascimento do cliente:");
+        Date dataNascimento = new Date(input.nextLine());
 
-        Cliente cliente = new Cliente(nome, cpf);
+        Cliente cliente = new Cliente(idCliente,nome, cpf,dataNascimento);
         banco.inserirCliente(cliente);
         System.out.println("Cliente inserido com sucesso!");
+        idCliente++;
     }
 
     public static void consultarCliente(Banco banco, Scanner input) {
         System.out.print("Digite o CPF do cliente: ");
         String cpf = input.nextLine();
 
-        Cliente cliente = banco.consultarCliente(cpf);
+        Cliente cliente = banco.consultarClientePorCPF(cpf);
         if (cliente != null) {
             System.out.println(cliente);
         } else {
