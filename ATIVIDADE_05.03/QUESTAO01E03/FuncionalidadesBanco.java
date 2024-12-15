@@ -91,6 +91,7 @@ public class FuncionalidadesBanco {
         System.out.println("Média de saldo das contas: R$" + mediaSaldo);
     }
 
+
     public static void inserirCliente(Banco banco, Scanner input) {
         System.out.print("Digite o nome do cliente: ");
         String nome = input.nextLine();
