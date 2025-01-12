@@ -1,7 +1,8 @@
+package QUESTAO_04;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,7 +16,7 @@ public class App {
     App(Banco banco) {
         this.banco = banco;
     }
-    //FUNCIONALIDADE DA CONTA:
+
     void inserirConta() {
         input.nextLine();
 
@@ -26,18 +27,18 @@ public class App {
         String cpfCliente = input.nextLine();
 
         Cliente cliente = banco.consultarClientePorCPF(cpfCliente);
-        Conta conta = new Conta(idConta,cliente,numeroConta,0);
+        Conta conta = new Conta(idConta, cliente, numeroConta, 0);
 
         if(cliente == null) {
             System.out.println("Cliente não encontrado ou não especificado!");
-        }else{
+        } else {
             cliente.contas.add(conta);
         }
-
 
         banco.inserirConta(conta);
         idConta++;
     }
+
     void consultarConta() {
         input.nextLine();
 
@@ -47,10 +48,11 @@ public class App {
         Conta conta = banco.consultarConta(numeroConta);
         if(conta == null) {
             System.out.println("Conta não encontrada!");
-        }else{
+        } else {
             System.out.println(conta.toStringConta());
         }
     }
+
     void sacarConta() {
         input.nextLine();
 
@@ -61,7 +63,7 @@ public class App {
 
         if(conta == null) {
             System.out.println("Conta não encontrada!");
-        }else{
+        } else {
             System.out.println("Informe o valor do saque? ");
             double valorSaque = input.nextDouble();
 
@@ -81,7 +83,7 @@ public class App {
 
         if(conta == null) {
             System.out.println("Conta não encontrada!");
-        }else{
+        } else {
             System.out.println("Informe o valor do deposito? ");
             double valorDeposito = input.nextDouble();
 
@@ -102,7 +104,7 @@ public class App {
 
         if(conta == null) {
             System.out.println("Conta não encontrada!");
-        }else{
+        } else {
             banco.excluirConta(numeroConta);
             if(cliente != null) {
                 if(cliente.contas.size() == 0){
@@ -128,7 +130,7 @@ public class App {
         if(contaOrigem == null || contaDestino == null) {
             System.out.println("Não foi possivel fazer a transferência!");
             System.out.println("A conta informada é inválida!");
-        }else{
+        } else {
             System.out.println("Informe o valor da transferência: $");
             double valorTransferencia = input.nextDouble();
 
@@ -137,7 +139,7 @@ public class App {
                 contaDestino.saldo += valorTransferencia;
 
                 System.out.println("Transferência realizada com sucesso!");
-            }else{
+            } else {
                 System.out.println("Saldo insuficiente!");
             }
         }
@@ -154,7 +156,7 @@ public class App {
 
         if(cliente == null) {
             System.out.println("Cliente não encontrado!");
-        }else{
+        } else {
             List<Conta> contas = cliente.contas;
 
             for(Conta conta : contas) {
@@ -164,6 +166,7 @@ public class App {
             System.out.println("O cliente possui um total das contas de R$ " + totalizar);
         }
     }
+
     void mudarTitularConta(){
         input.nextLine();
 
@@ -173,13 +176,13 @@ public class App {
         Conta conta = banco.consultarConta(numeroConta);
         if(conta == null) {
             System.out.println("Conta não encontrada.");
-        }else{
+        } else {
 
             Cliente cliente = conta.cliente == null ? null : banco.consultarClientePorCPF(conta.cliente.cpf);
             if(cliente == null) {
                 System.out.println("Essa conta não possui titular!");
                 System.out.println("Associe essa conta a um cliente!");
-            }else{
+            } else {
                 System.out.println(conta.toStringConta());
                 System.out.println("Informe o CPF do novo titular: ");
                 String cpfTitularNovo = input.nextLine();
@@ -189,7 +192,7 @@ public class App {
                 if(cliente1 == null) {
                     System.out.println("Cliente não existe!!");
                     System.out.println("Crie o cliente antes de mudar o titular!");
-                }else{
+                } else {
                     conta.cliente = cliente1;
                     cliente.contas.remove(conta);
                     cliente1.contas.add(conta);
@@ -212,7 +215,6 @@ public class App {
             return;
         }
 
-
         System.out.println("Quantidade de contas: ");
         int quantsContas = input.nextInt();
         List<Conta> contas = new ArrayList<Conta>();
@@ -225,27 +227,25 @@ public class App {
 
             Conta conta1 = banco.consultarConta(numeroConta1);
 
-            if(conta != null) {
+            if(conta1 != null) {
                 contas.add(conta1);
             }
         }
 
         System.out.println("Quantidade de contas válidas: " + contas.size());
 
-
         System.out.println("Qual o valor você deseja transferir: R$");
         double valorTransferencia = input.nextDouble();
 
-        if(valorTransferencia*contas.size() <= conta.saldo){
+        if(valorTransferencia * contas.size() <= conta.saldo){
             conta.saldo -= valorTransferencia * contas.size();
             for(Conta conta1 : contas){
                 conta1.saldo += valorTransferencia;
             }
-        }else{
+        } else {
             System.out.println("Saldo insuficiente!");
         }
     }
-    //FUNCIONALIDADE DO CLIENTE:
 
     void inserirCliente() {
         input.nextLine();
@@ -262,7 +262,7 @@ public class App {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate dataNascimento = LocalDate.parse(dataNascimentoStr, formatter);
 
-        Cliente cliente = new Cliente(idCliente,nomeCliente,cpfCliente,dataNascimento);
+        Cliente cliente = new Cliente(idCliente, nomeCliente, cpfCliente, dataNascimento);
 
         banco.inserirCliente(cliente);
         System.out.println(cliente.toStringCliente());
@@ -278,7 +278,7 @@ public class App {
         Cliente cliente = banco.consultarClientePorCPF(cpfCliente);
         if(cliente == null) {
             System.out.println("Cliente não encontrado!");
-        }else {
+        } else {
             System.out.println(cliente.toStringCliente());
         }
     }
@@ -293,8 +293,7 @@ public class App {
 
         if(cliente == null) {
             System.out.println("Cliente não encontrado");
-        }
-        else{
+        } else {
             System.out.println(cliente.toStringCliente());
             System.out.println("Informe o numero da conta: ");
             String numeroConta = input.nextLine();
@@ -303,18 +302,19 @@ public class App {
 
             if(conta == null) {
                 System.out.println("Não foi possivel associar a uma conta que não existe!");
-            }else{
+            } else {
                 if(conta.cliente == null){
                     cliente.contas.add(conta);
                     conta.cliente = cliente;
 
                     System.out.println("Associado com sucesso!");
-                }else{
+                } else {
                     System.out.println("Conta já possui um cliente associado!");
                 }
             }
         }
     }
+
     void excluirCliente(){
         input.nextLine();
 
@@ -322,6 +322,5 @@ public class App {
         String cpfCliente = input.nextLine();
 
         banco.excluirCliente(cpfCliente);
-
     }
 }
