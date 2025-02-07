@@ -5,7 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f1ae5cd-766a-4748-8556-564c10863ed8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ATIVIDADE07/ATIVIDADE07.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ATIVIDADE_07.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_01/Carro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_01/CarroEletrico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_01/Veiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_02/Calculadora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_02/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_03/Calculadora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_03/CalculadoraCientifica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_03/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_04/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_04/Banco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_04/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_04/Conta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_04/ContaImposto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_04/ContaPoupanca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_04/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_05/Estoque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_05/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_05/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QUESTAO_05/ProdutoPerecivel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,29 +53,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.QUESTAO_03.Main.executor": "Run",
-    "Application.QUESTAO_04.Main.executor": "Run",
-    "Application.QUESTAO_05.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/thali/PROGRAMACAO/DESENVOLVIMENTO/matriculason-api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QUESTAO_03.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QUESTAO_05.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/PROGRAMACAO/ADS/POO-ADS/ATIVIDADE_07/QUESTAO_04&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\PROGRAMACAO\ADS\POO-ADS\ATIVIDADE_07\QUESTAO_04" />
@@ -127,8 +149,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -143,8 +165,6 @@
       <workItem from="1736601082977" duration="7067000" />
       <workItem from="1736608795304" duration="4070000" />
       <workItem from="1736627598028" duration="381000" />
-      <workItem from="1737385646798" duration="1021000" />
-      <workItem from="1737554515767" duration="319000" />
     </task>
     <servers />
   </component>

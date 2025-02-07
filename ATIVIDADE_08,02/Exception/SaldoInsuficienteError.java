@@ -1,4 +1,7 @@
 package Exception;
 
-public class SaldoInsuficienteError {
+public class SaldoInsuficienteError extends AplicacaoError {
+    public SaldoInsuficienteError() {
+        super("Erro: Saldo insuficiente.");
+    }
 }

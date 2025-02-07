@@ -1,4 +1,7 @@
 package Exception;
 
-public class ValorInvalidoError {
+class ValorInvalidoError extends AplicacaoError {
+    public ValorInvalidoError() {
+        super("Valor inválido para a operação.");
+    }
 }
